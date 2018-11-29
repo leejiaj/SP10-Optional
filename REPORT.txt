@@ -1,0 +1,38 @@
+CS 5V81 SP 10: Divide and conquer algorithms
+Leejia James
+
+Optional tasks (individual): 
+2. Compare the performance of the two versions of partition discussed in class
+on the running time of Quick sort, on arrays with distinct elements.
+Try arrays that are randomly ordered (by shuffle) and arrays in
+descending order.
+
+*******************************************************************************************************
+Algorithm 					Array Order		n (M)								Running Time (s)
+*******************************************************************************************************
+partition 1					Random			8									8.949
+partition 1					Random			16									19.744
+partition 1					Random			32									78.53
+partition 1					Random			64									328.295
+-------------------------------------------------------------------------------------------------------
+partition (Hoare)			Random			8									12.754
+partition (Hoare)			Random			16									28.739
+partition (Hoare)			Random			32									221.717
+partition (Hoare)			Random			64									618.796
+-------------------------------------------------------------------------------------------------------
+partition 1					Descending		8									8.391
+partition 1					Descending		16									23.525
+partition 1					Descending		32									65.379
+partition 1					Descending		64									187.214
+-------------------------------------------------------------------------------------------------------
+partition (Hoare)			Descending		8									10.608
+partition (Hoare)			Descending		16									84.675
+partition (Hoare)			Descending		32									215.345
+partition (Hoare)			Descending		64									282.533
+partition (Hoare)			Descending		128									945.306
+-------------------------------------------------------------------------------------------------------
+
+For the observations made, the partition 1 algorithm gives better results than partition Hoare. For randomly ordered array, 
+when number of elements increases this distinction is very clear. But on arrays where elements are in descending order 
+partition Hoare is not bad, as the number of elmements increase it gives reasonable running times. But for the observations 
+made partition 1 still beats partition Hoare even in descending ordered array.
